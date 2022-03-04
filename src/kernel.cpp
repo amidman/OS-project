@@ -1,8 +1,16 @@
 extern "C"{
-#include "../include/C/stdint.h"
-#include "../include/C/stdio.h"
-#include "../include/graphics/graphics.h"
-#include "../include/graphics/primitives.h"
+#include "stdint.h"
+#include "stdio.h"
+#include "graphics.h"
+#include "primitives.h"
+
+static const gr_con graphic_config = {
+	320,
+	200,
+	1,
+	TYPE_256,
+};
+
 
 // tell compiler our int32 function is external
 extern void int32(unsigned char intnum, regs16_t *regs);
