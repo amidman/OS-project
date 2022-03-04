@@ -1,6 +1,8 @@
 #pragma once
 
-struct color{
+#include <stdint.h>
+
+struct Color{
     union{
         unsigned char r;
         unsigned char col;
@@ -14,7 +16,7 @@ struct gr_con{
     uint16_t width;
     uint16_t height;
     uint8_t bpp;
-    enum type{
+    enum Type{
         TYPE_16,
         TYPE_256,
         TYPE_1555,
