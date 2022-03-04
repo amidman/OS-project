@@ -1,8 +1,6 @@
 extern "C"{
-#include "include/C/stdint.h"
-#include "include/C/stdio.h"
-#include "include/graphic/graphic.h"
-#include "include/graphic/primitives.h"
+#include "graphics/graphics.h"
+#include "graphics/primitives.h"
 
 // tell compiler our int32 function is external
 extern void int32(unsigned char intnum, regs16_t *regs);
