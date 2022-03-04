@@ -1,5 +1,5 @@
 OUTPUT_FORMAT(elf32-i386)
-ENTRY(int32_test)
+ENTRY(kernel)
 SECTIONS
  {
    . = 0x100000;

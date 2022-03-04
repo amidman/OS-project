@@ -1,33 +1,3 @@
-; 
-; Protected Mode BIOS Call Functionailty v2.0 - by Napalm
-; -------------------------------------------------------
-; 
-; This is code shows how its POSSIBLE to execute BIOS interrupts
-; by switch out to real-mode and then back into protected mode.
-; 
-; If you wish to use all or part of this code you must agree
-; to the license at the following URL.
-; 
-; License: http://creativecommons.org/licenses/by-sa/2.0/uk/
-;         
-; Notes: This file is in NASM syntax.
-;        Turn off paging before calling these functions.
-;        int32() resets all selectors.
-;
-; C Prototype:
-;	void _cdelc int32(unsigned char intnum, regs16_t *regs);
-; 
-; Example of usage:
-;   regs.ax = 0x0013;
-;   int32(0x10, &regs);
-;   memset((char *)0xA0000, 1, (320*200));
-;   memset((char *)0xA0000 + (100*320+80), 14, 80);
-;   regs.ax = 0x0000;
-;   int32(0x16, &regs);
-;   regs.ax = 0x0003;
-;   int32(0x10, &regs);
-; 
-; 
 [bits 32]
 
 section .text

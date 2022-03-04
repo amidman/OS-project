@@ -1,8 +1,8 @@
 extern "C"{
-#include "graphics/graphics.h"
-#include "graphics/primitives.h"
-#include "kernel/reg.h"
-#include "kernel/print.h"
+#include "../include/C/stdint.h"
+#include "../include/C/stdio.h"
+#include "../include/graphics/graphics.h"
+#include "../include/graphics/primitives.h"
 
 // tell compiler our int32 function is external
 extern void int32(unsigned char intnum, regs16_t *regs);
@@ -19,13 +19,6 @@ void kernel(){
 
 	regs.ax = 0x0013;
 	int32(0x10, &regs);
-
-	for(int i=0;i<320;i++){
-		for(int j=0;j<200;j++){
-			Color c = {254,0,0};
-			pixel(i,j,1);
-		}
-	}
 
 	// wait for key
 	regs.ax = 0x0000;

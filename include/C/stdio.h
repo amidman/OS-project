@@ -1,9 +1,7 @@
-#include "kernel/print.h"
-#include <stdint.h>
+#pragma once
 
-static int x_coursor = 0;
-static int y_coursor = 0;
-
+int x_coursor = 0;
+int y_coursor = 0;
 void printid(int a){
 	uint8_t* vid = (uint8_t*)0xB8000;
 	do{
@@ -39,4 +37,4 @@ void printih(int a){
 		a = (a-a%16)/16;
 		x_coursor++;
 	}while(a!=0);
-}
+} 

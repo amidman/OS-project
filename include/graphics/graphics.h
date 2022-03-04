@@ -2,17 +2,16 @@
 #include "../C/stdint.h"
 
 
-struct Color{
+typedef struct{
     union{
         unsigned char r;
         unsigned char col;
     };
 	unsigned char g;
 	unsigned char b;
-};
-typedef struct color color;
+} Color;
 
-struct gr_con{
+typedef struct{
     uint16_t width;
     uint16_t height;
     uint8_t bpp;
@@ -23,6 +22,6 @@ struct gr_con{
         TYPE_565,
         TYPE_888,
     };
-};
+} gr_con;
 
 #include "primitives.h"

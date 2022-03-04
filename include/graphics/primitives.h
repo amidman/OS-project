@@ -3,11 +3,7 @@
 void pixel(int x, int y, gr_con con, Color c){
 	uint8_t *framebuffer = (uint8_t*)0xA0000;
 
-    framebuffer += (y * gr_con.width + x) * gr_con.bpp;
-
-	if(){
-        
-    }
+    framebuffer += (y * con.width + x) * con.bpp;
 }
 
 void draw_rect(int x, int y, int w, int h, Color c){
