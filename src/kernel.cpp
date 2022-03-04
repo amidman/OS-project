@@ -1,16 +1,17 @@
 extern "C"{
-extern void int32(unsigned char intnum, regs16_t *regs);
-
 #include "../include/C/stdint.h"
+extern void int32(unsigned char intnum, regs16_t *regs);
 #include "../include/C/stdio.h"
 #include "../include/ports/io.h"
-#include "../include/interrupts/idt.h"
-#include "../include/interrupts/pic.h"
+//#include "../include/interrupts/idt.h"
+//#include "../include/interrupts/pic.h"
 #include "../include/graphics/graphics.h"
 #include "../include/graphics/primitives.h"
 
 // int32 test
 void kernel(){
+    regs16_t regs;
+
 	init_video();
 
 	for(int i=0;i<320;i++){
