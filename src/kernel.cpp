@@ -1,10 +1,11 @@
 extern "C"{
 #include "graphics/graphics.h"
 #include "graphics/primitives.h"
+#include "kernel/reg.h"
+#include "kernel/print.h"
 
 // tell compiler our int32 function is external
 extern void int32(unsigned char intnum, regs16_t *regs);
-
 
 // int32 test
 void kernel(){
@@ -21,7 +22,7 @@ void kernel(){
 
 	for(int i=0;i<320;i++){
 		for(int j=0;j<200;j++){
-			color c = {254,0,0};
+			Color c = {254,0,0};
 			pixel(i,j,1);
 		}
 	}
