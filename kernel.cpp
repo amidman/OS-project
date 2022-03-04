@@ -7,32 +7,9 @@ extern "C"{
 // tell compiler our int32 function is external
 extern void int32(unsigned char intnum, regs16_t *regs);
 
-/*
-void memset(char* str, color c, int count){
-	for(int i=0;i<count;i++){
-		str[i*3+0] = c.b;
-		str[i*3+1] = c.g;
-		str[i*3+2] = c.r;
-	}
-}
-*/
-
-void memset(char* str, char c, int count){
-	for(int i=0;i<count;i++){
-		str[i*2+0] = c;
-		str[i*2+1] = 0x07;
-	}
-}
-
-int getPtr(int x){
-	int* p = &x;    // pointer points to a location.
-	int a = *p;     // dereference, a == 5
-	int b = (int)p;
-	return b;
-}
 
 // int32 test
-void int32_test(){
+void kernel(){
 	int y;
 	regs16_t regs;
 
