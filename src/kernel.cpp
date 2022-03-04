@@ -20,6 +20,14 @@ void kernel(){
 	regs.ax = 0x0013;
 	int32(0x10, &regs);
 
+	for(int i=0;i<320;i++){
+		for(int j=0;j<200;j++){
+			Color c;
+			c.col = 1;
+			pixel(i,j, graphic_config, c);
+		}
+	}
+
 	// wait for key
 	regs.ax = 0x0000;
 	int32(0x16, &regs);
