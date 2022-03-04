@@ -1,6 +1,6 @@
 #pragma once
+#include "../C/stdint.h"
 
-#include <stdint.h>
 
 struct Color{
     union{
