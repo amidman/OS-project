@@ -1,12 +1,14 @@
 extern "C"{
 #include "graphics/graphics.h"
 #include "graphics/primitives.h"
+#include "kernel/reg.h"
+#include "kernel/print.h"
 
 // tell compiler our int32 function is external
 extern void int32(unsigned char intnum, regs16_t *regs);
 
 /*
-void memset(char* str, color c, int count){
+void memset(char* str, Color c, int count){
 	for(int i=0;i<count;i++){
 		str[i*3+0] = c.b;
 		str[i*3+1] = c.g;
@@ -44,7 +46,7 @@ void int32_test(){
 
 	for(int i=0;i<320;i++){
 		for(int j=0;j<200;j++){
-			color c = {254,0,0};
+			Color c = {254,0,0};
 			pixel(i,j,1);
 		}
 	}
